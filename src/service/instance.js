@@ -8,7 +8,10 @@ const knex = require("knex")({
     password: "Revd3y4iSPDcSClNOIdRQLnxaDpTh4SL",
     database: "etsolubq",
     port: 5432,
-  },
+    ssl: {
+      rejectUnauthorized: false
+    }
+  }
 });
 
 const api = axios.create({
